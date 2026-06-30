@@ -1,0 +1,3 @@
+C:/projects/nucleo-l476rg/build/CMakeFiles/firmware.elf.dir
+C:/projects/nucleo-l476rg/build/CMakeFiles/edit_cache.dir
+C:/projects/nucleo-l476rg/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/projects/nucleo-l476rg/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
