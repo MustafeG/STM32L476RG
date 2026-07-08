@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug STM32",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "configFiles": [
+                "openocd.cfg"
+            ],
+            "executable": "${workspaceFolder}/build/firmware.elf",
+            "runToEntryPoint": "main",
+            "svdFile": "${workspaceFolder}/STM32L476.svd",
+            "showDevDebugOutput": "none"
+        }
+    ]
+}
