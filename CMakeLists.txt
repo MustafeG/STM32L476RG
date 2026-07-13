@@ -43,6 +43,8 @@ include_directories(
 
 add_executable(firmware.elf
     Src/main.c
+    Src/gpio.c
+    Src/systick.c
     # Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/system_stm32l4xx.c
     Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/gcc/startup_stm32l476xx.s
 )

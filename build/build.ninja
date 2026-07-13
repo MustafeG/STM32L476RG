@@ -58,6 +58,24 @@ build CMakeFiles/firmware.elf.dir/Src/main.c.obj: C_COMPILER__firmware.2eelf_uns
   OBJECT_FILE_DIR = CMakeFiles\firmware.elf.dir\Src
   TARGET_SUPPORT_DIR = CMakeFiles\firmware.elf.dir
 
+build CMakeFiles/firmware.elf.dir/Src/gpio.c.obj: C_COMPILER__firmware.2eelf_unscanned_Debug C$:/projects/nucleo-l476rg/Src/gpio.c || cmake_object_order_depends_target_firmware.elf
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\firmware.elf.dir\Src\gpio.c.obj.d
+  FLAGS = -g -std=gnu11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -O0 -g3 -DSTM32L476xx -ffunction-sections -fdata-sections
+  INCLUDES = -IC:/projects/nucleo-l476rg/Drivers/CMSIS/Include -IC:/projects/nucleo-l476rg/Drivers/CMSIS/Device/ST/STM32L4xx/Include -IC:/projects/nucleo-l476rg/Inc
+  OBJECT_DIR = CMakeFiles\firmware.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles\firmware.elf.dir\Src
+  TARGET_SUPPORT_DIR = CMakeFiles\firmware.elf.dir
+
+build CMakeFiles/firmware.elf.dir/Src/systick.c.obj: C_COMPILER__firmware.2eelf_unscanned_Debug C$:/projects/nucleo-l476rg/Src/systick.c || cmake_object_order_depends_target_firmware.elf
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\firmware.elf.dir\Src\systick.c.obj.d
+  FLAGS = -g -std=gnu11 -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wall -O0 -g3 -DSTM32L476xx -ffunction-sections -fdata-sections
+  INCLUDES = -IC:/projects/nucleo-l476rg/Drivers/CMSIS/Include -IC:/projects/nucleo-l476rg/Drivers/CMSIS/Device/ST/STM32L4xx/Include -IC:/projects/nucleo-l476rg/Inc
+  OBJECT_DIR = CMakeFiles\firmware.elf.dir
+  OBJECT_FILE_DIR = CMakeFiles\firmware.elf.dir\Src
+  TARGET_SUPPORT_DIR = CMakeFiles\firmware.elf.dir
+
 build CMakeFiles/firmware.elf.dir/Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/gcc/startup_stm32l476xx.s.obj: ASM_COMPILER__firmware.2eelf_unscanned_Debug C$:/projects/nucleo-l476rg/Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/gcc/startup_stm32l476xx.s || cmake_object_order_depends_target_firmware.elf
   CONFIG = Debug
   DEP_FILE = CMakeFiles\firmware.elf.dir\Drivers\CMSIS\Device\ST\STM32L4xx\Source\Templates\gcc\startup_stm32l476xx.s.obj.d
@@ -75,7 +93,7 @@ build CMakeFiles/firmware.elf.dir/Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templ
 #############################################
 # Link the executable firmware.elf
 
-build firmware.elf: C_EXECUTABLE_LINKER__firmware.2eelf_Debug CMakeFiles/firmware.elf.dir/Src/main.c.obj CMakeFiles/firmware.elf.dir/Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/gcc/startup_stm32l476xx.s.obj
+build firmware.elf: C_EXECUTABLE_LINKER__firmware.2eelf_Debug CMakeFiles/firmware.elf.dir/Src/main.c.obj CMakeFiles/firmware.elf.dir/Src/gpio.c.obj CMakeFiles/firmware.elf.dir/Src/systick.c.obj CMakeFiles/firmware.elf.dir/Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/gcc/startup_stm32l476xx.s.obj
   CONFIG = Debug
   FLAGS = -g
   LINK_FLAGS = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -TC:/projects/nucleo-l476rg/STM32L476RGTX_FLASH.ld -Wl,--gc-sections -specs=nano.specs -specs=nosys.specs -Wl,-Map=C:/projects/nucleo-l476rg/build/firmware.map
