@@ -1,12 +1,10 @@
 #include "gpio.h"
 
 
+
 void setMODER(GPIO_TypeDef *gpio, uint8_t pin, portConfig output){
     gpio->MODER &= ~ (0x3UL << (pin*2));
     gpio->MODER |=  (output << (pin*2));
-
-    gpio->ODR |= (1U << pin);
-
 }
 
 void gpio_write_pin(GPIO_TypeDef *gpio, uint8_t pin, uint8_t state)

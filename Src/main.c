@@ -1,6 +1,7 @@
 #include "stm32l476xx.h"
 #include "gpio.h"
 #include "systick.h"
+#include "uart.h"
 
 void SystemInit(void)
 {
@@ -18,6 +19,7 @@ int main(void)
     (void)RCC->AHB2ENR;
 
     systick_init();
+    uart_init();
 
     setMODER(GPIOA, 5, OUTPUT);
 
@@ -34,12 +36,15 @@ int main(void)
 
     while (1)
     {
-        // GPIOA->BSRR = GPIO_BSRR_BS5;
-        // delay(1000000);
-        // GPIOA->BSRR = GPIO_BSRR_BR5;
-        // delay(1000000);
-
-        // void toggle(GPIO_TypeDef *gpio, uint8_t pin, uint32_t ms)
-        toggle(GPIOA, 5, 3000);
+        toggle(GPIOA, 5, 1000);
+        // uart_send_char('M');
+        if (uart_rx_ready())
+        {
+            uart_send_newline();
+            uart_send_char('>');
+            uart_send_string(uart_get_rx_buffer());
+            uart_send_newline();
+            uart_clear_rx_ready();
+        }
     }
 }

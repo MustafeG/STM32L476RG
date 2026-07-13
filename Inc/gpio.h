@@ -12,6 +12,7 @@ typedef enum{
     ANALOG      = 0x3UL
 }portConfig;
 
+
 void setMODER(GPIO_TypeDef *gpio, uint8_t pin, portConfig output);
 void gpio_write_pin(GPIO_TypeDef *gpio, uint8_t pin, uint8_t state);
 void toggle(GPIO_TypeDef *gpio, uint8_t pin, uint32_t ms);
